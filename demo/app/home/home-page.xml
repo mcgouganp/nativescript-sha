@@ -1,0 +1,14 @@
+<Page class="page"
+    navigatingTo="onNavigatingTo"
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar class="action-bar">
+        <Label class="action-bar-title" text="Home"></Label>
+    </ActionBar>
+
+    <StackLayout>
+        <TextField hint="{{ hint }}" text="{{ text }}" />
+        <Button text="SHA256" tap="{{ doHash }}" class="button-a button-group-first" />
+        <Label text="{{ hash }}" class="message" textWrap="true" />
+    </StackLayout>
+</Page>
