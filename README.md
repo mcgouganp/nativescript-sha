@@ -28,7 +28,7 @@ Describe any usage specifics for your plugin. Give examples for Android, iOS, An
     import { Sha256 } from 'nativescript-sha';
     this.set("hash", Sha256(this.get("text")));
     console.log(`Data is ${Sha256("this is our test data")}`);
-    ```
+    ```)
 
 ## API
 
