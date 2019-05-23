@@ -1,7 +1,7 @@
 
 export function Sha256(input: string): string {
 	let javaStr;
-	if (input) {
+	if(input) {
 		javaStr = new java.lang.String(input);
 	} else {
 		return null;
