@@ -1,9 +1,6 @@
 import { Observable, PropertyChangeData } from "tns-core-modules/data/observable";
 import { Sha256 } from 'nativescript-sha';
 
-//blah+au.com.aussiechlorinators.xtremepro+test5@a.com
-//bdf2776193d92a88ccdcc34dde7978353143fca1b4006795cdf6a5e9cc873b32
-
 export class HomeViewModel extends Observable {
     constructor() {
         super();
