@@ -24,11 +24,11 @@ tns plugin add nativescript-sha
 
 Describe any usage specifics for your plugin. Give examples for Android, iOS, Angular if needed. See [nativescript-drop-down](https://www.npmjs.com/package/nativescript-drop-down) for example.
 
-	```typescript
-    import { Sha256 } from 'nativescript-sha';
-    this.set("hash", Sha256(this.get("text")));
-    console.log(`Data is ${Sha256("this is our test data")}`);
-    ```
+```typescript
+import { Sha256 } from 'nativescript-sha';
+
+console.log(`Data is ${Sha256("this is our test data")}`);
+```
 
 ## API
 
