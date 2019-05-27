@@ -50,9 +50,7 @@
 	"homepage": "https://github.com/mcgouganp/nativescript-sha",
 	"readmeFilename": "README.md",
 	"devDependencies": {
-		"@babel/code-frame": "^7.0.0",
 		"ajv": "^6.10.0",
-		"babel-code-frame": "^6.26.0",
 		"nativescript-dev-webpack": "0.22.0",
 		"prompt": "^1.0.0",
 		"rimraf": "^2.6.3",
