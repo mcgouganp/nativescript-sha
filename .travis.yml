@@ -23,7 +23,7 @@ matrix:
       script: cd src && npm run build && cd ../demo && npm i && tns build android --bundle --env.uglify --env.snapshot
     - language: android
       env:
-        - BuildAndroid="24"
+        - BuildAndroid="28"
       os: linux
       jdk: oraclejdk8
       before_install: nvm install stable
@@ -45,7 +45,7 @@ matrix:
       sudo: required
       jdk: oraclejdk8
       before_script:
-        - echo no | android create avd --force -n test -t android-22 -b armeabi-v7a -c 100M
+        - echo no | android create avd --force -n test -t android-21 -b armeabi-v7a -c 100M
         - emulator -avd test -no-audio -no-window &
         - android-wait-for-emulator
         - adb shell input keyevent 82 &
@@ -61,13 +61,12 @@ matrix:
 
 android:
   components:
-    - platform-tools
     - tools
-    - build-tools-24.0.3
-    - android-22
-    - android-24
-    - sys-img-armeabi-v7a-android-22
+    - platform-tools
+    - build-tools-28.0.3
+    - android-28
     - extra-android-m2repository
+    - sys-img-armeabi-v7a-android-21
 
 before_install:
     - sudo pip install --upgrade pip
