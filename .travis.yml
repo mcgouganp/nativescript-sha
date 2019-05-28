@@ -61,10 +61,13 @@ matrix:
 
 android:
   components:
-    - build-tools-28.0.3
-    - android-28
-    - extra-android-m2repository
+    - platform-tools
+    - tools
+    - build-tools-24.0.3
+    - android-22
+    - android-24
     - sys-img-armeabi-v7a-android-22
+    - extra-android-m2repository
 
 before_install:
     - sudo pip install --upgrade pip
