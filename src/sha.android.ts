@@ -1,33 +1,28 @@
 
 export function Sha256(input: string): string {
-	let javaStr;
+	let javaStr: java.lang.String;
 	if(input) {
 		javaStr = new java.lang.String(input);
 	} else {
-		return null;
+		javaStr = new java.lang.String("");
 	}
-	let md, strDes;
 	const bt = javaStr.getBytes();
+	let result: string = '';
 	try {
-		md = java.security.MessageDigest.getInstance('SHA-256');
+		let md = java.security.MessageDigest.getInstance('SHA-256');
 		md.update(bt);
-		strDes = toHexString(md.digest());
-	}
-	catch (e) {
+		const out = md.digest();
+		let tmp: string;
+		for(let i = 0; i !== out.length; i++) {
+			tmp = java.lang.Integer.toHexString((out[i] + 256) % 256);
+			if(tmp.length % 2 === 1) {
+				result += '0';
+			}
+			result += tmp;
+		}
+	} catch(e) {
+		console.log(`Sha256 error - ${e}`);
 		return null;
 	}
-	return strDes;
-}
-
-function toHexString(input: string): string {
-	let des = '', tmp;
-	for(let i = 0; i < input.length; i++) {
-		const ch: number = input.charCodeAt(i);
-		tmp = java.lang.Integer.toHexString(ch);
-		if(tmp.length === 1) {
-			des += '0';
-		}
-		des += tmp;
-	}
-	return des;
+	return result;
 }
