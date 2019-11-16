@@ -1,5 +1,5 @@
 import { Observable, PropertyChangeData } from "tns-core-modules/data/observable";
-import { Sha256 } from 'nativescript-sha';
+import { Sha1, Sha224, Sha256, Sha384, Sha512 } from 'nativescript-sha';
 
 export class HomeViewModel extends Observable {
 	constructor() {
@@ -14,8 +14,21 @@ export class HomeViewModel extends Observable {
 	}
 
 	public doHash() {
-		this.set("hash", Sha256(this.get("text")));
 		console.log(`Data is ${this.get("text")}`);
-		console.log(`Sha is ${this.get("hash")}`);
+
+		this.set("hash1", Sha1(this.get("text")));
+		console.log(`SHA-1 is ${this.get("hash1")}`);
+
+		this.set("hash224", Sha224(this.get("text")));
+		console.log(`SHA-224 is ${this.get("hash224")}`);
+
+		this.set("hash256", Sha256(this.get("text")));
+		console.log(`SHA-256 is ${this.get("hash256")}`);
+
+		this.set("hash384", Sha384(this.get("text")));
+		console.log(`SHA-384 is ${this.get("hash384")}`);
+
+		this.set("hash512", Sha512(this.get("text")));
+		console.log(`SHA-512 is ${this.get("hash512")}`);
 	}
 }
