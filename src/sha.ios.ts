@@ -12,7 +12,7 @@ export function Sha256(input: string): string {
 	const view: Uint8Array = new Uint8Array(buffer);
 
 	let result: string = "";
-	for(let i = 0; i != 32; ++i) {
+	for(let i = 0; i !== 32; ++i) {
 		let tmp: string = view[i].toString(16);
 		if(tmp.length === 1) {
 			result += "0";
