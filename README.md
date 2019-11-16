@@ -6,7 +6,7 @@
 
 This plugin gives access to native SHA generation code on iOS and Android.
 
-Currently only SHA-256 is supported but more will be added.
+Supports SHA-1, SHA-224, SHA-256, SHA-384 and SHA-512.
 
 ## (Optional) Prerequisites / Requirements
 
