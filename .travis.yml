@@ -74,6 +74,7 @@ addons:
 
 before_install:
     - sudo python -V
+    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then sudo python -m pip -V; fi
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then sudo python -m pip2 -V; fi
     - if [ "$TRAVIS_OS_NAME" = "osx" ]; then sudo python -m pip3 -V; fi
     - sudo python -m pip install --upgrade pip
