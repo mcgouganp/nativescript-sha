@@ -1,7 +1,7 @@
 {
 	"name": "nativescript-sha",
-	"version": "1.0.2",
-	"description": "Nativescript SHA plugin.",
+	"version": "1.0.3",
+	"description": "Nativescript SHA (HMAC-SHA) plugin.",
 	"main": "sha",
 	"typings": "index.d.ts",
 	"nativescript": {
@@ -37,7 +37,8 @@
 		"JavaScript",
 		"Android",
 		"iOS",
-		"SHA256"
+		"SHA256",
+		"HMAC"
 	],
 	"author": {
 		"name": "Paul McGougan",

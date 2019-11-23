@@ -7,9 +7,9 @@
     </ActionBar>
 
     <StackLayout>
-        <GridLayout rows="auto, auto, auto, auto, auto, auto" columns="auto, *">
+        <GridLayout rows="auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto" columns="auto, *">
             <Label row="0" col="0" text="Input:" />
-            <TextField row="0" col="1" hint="{{ hint }}" text="{{ text }}" />
+            <TextField row="0" col="1" hint="{{ hintInput }}" text="{{ textInput }}" />
             <Label row="1" col="0" text="SHA-1:" />
             <Label row="1" col="1" text="{{ hash1 }}" class="message" textWrap="true" />
             <Label row="2" col="0" text="SHA-224:" />
@@ -20,7 +20,19 @@
             <Label row="4" col="1" text="{{ hash384 }}" class="message" textWrap="true" />
             <Label row="5" col="0" text="SHA-512:" />
             <Label row="5" col="1" text="{{ hash512 }}" class="message" textWrap="true" />
+            <Label row="6" col="0" text="Key:" />
+            <TextField row="6" col="1" hint="{{ hintKey }}" text="{{ textKey }}" />
+            <Label row="7" col="0" text="HMAC SHA-1:" />
+            <Label row="7" col="1" text="{{ hmac1 }}" class="message" textWrap="true" />
+            <Label row="8" col="0" text="HMAC SHA-224:" />
+            <Label row="8" col="1" text="{{ hmac224 }}" class="message" textWrap="true" />
+            <Label row="9" col="0" text="HMAC SHA-256:" />
+            <Label row="9" col="1" text="{{ hmac256 }}" class="message" textWrap="true" />
+            <Label row="10" col="0" text="HMAC SHA-384:" />
+            <Label row="10" col="1" text="{{ hmac384 }}" class="message" textWrap="true" />
+            <Label row="11" col="0" text="HMAC SHA-512:" />
+            <Label row="11" col="1" text="{{ hmac512 }}" class="message" textWrap="true" />
         </GridLayout>
-        <Button text="Hash" tap="{{ doHash }}" class="button-a button-group-first" />
+        <Button text="Process" tap="{{ process }}" class="button-a button-group-first" />
     </StackLayout>
 </Page>

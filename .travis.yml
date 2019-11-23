@@ -67,9 +67,15 @@ android:
     - extra-android-m2repository
     - sys-img-armeabi-v7a-android-21
 
+addons:
+  homebrew:
+    packages:
+      python
+
 before_install:
-    - sudo pip install --upgrade pip
-    - sudo pip install six
+    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then sudo easy_install pip; fi
+    - sudo python -m pip install --upgrade pip
+    - sudo python -m pip install six
 
 install:
     - echo no | npm install -g nativescript
