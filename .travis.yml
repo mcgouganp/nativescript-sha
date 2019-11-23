@@ -73,6 +73,9 @@ addons:
       python
 
 before_install:
+    - sudo python -V
+    - sudo python -m pip2 -V
+    - sudo python -m pip3 -V
     - sudo python -m pip install --upgrade pip
     - sudo python -m pip install six
 
