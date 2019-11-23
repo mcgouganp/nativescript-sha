@@ -8,7 +8,9 @@ This plugin gives access to native SHA generation code on iOS and Android.
 
 Supports SHA-1, SHA-224, SHA-256, SHA-384 and SHA-512.
 
-## (Optional) Prerequisites / Requirements
+Also support HMAC for all supported SHA hashes.
+
+## Prerequisites / Requirements
 
 None.
 
@@ -23,9 +25,11 @@ tns plugin add nativescript-sha
 ## Usage
 
 ```typescript
-import { Sha256 } from 'nativescript-sha';
+import { Sha256, HmacSha256 } from 'nativescript-sha';
 
-console.log(`Data is ${Sha256("this is our test data")}`);
+console.log(`Hash is ${Sha256("this is our test data")}`);
+
+console.log(`Hmac is ${HmacSha256("secretkey", "this is our test data")}`);
 ```
 
 ## License

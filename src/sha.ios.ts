@@ -63,8 +63,47 @@ export function Sha512(input: string): string {
 }
 
 
+export function HmacSha1(key: string, input: string): string {
+	return _Hmac(key, input, kCCHmacAlgSHA1, 20);
+}
+
+
+export function HmacSha224(key: string, input: string): string {
+	return _Hmac(key, input, kCCHmacAlgSHA224, 28);
+}
+
+
+export function HmacSha256(key: string, input: string): string {
+	return _Hmac(key, input, kCCHmacAlgSHA256, 32);
+}
+
+
+export function HmacSha384(key: string, input: string): string {
+	return _Hmac(key, input, kCCHmacAlgSHA384, 48);
+}
+
+
+export function HmacSha512(key: string, input: string): string {
+	return _Hmac(key, input, kCCHmacAlgSHA512, 64);
+}
+
 // ----------------------------------------------------------------------------
 // Internal
+
+function _Hmac(key: string, input: string, algorithm: number, hashSize: number): string {
+	const nsKeyStr: NSString = NSString.stringWithString(key);
+	const nsKeyData: NSData = nsKeyStr.dataUsingEncoding(NSUTF8StringEncoding);
+	const nsInputStr: NSString = NSString.stringWithString(input);
+	const nsInputData: NSData = nsInputStr.dataUsingEncoding(NSUTF8StringEncoding);
+	const hash: NSMutableData = NSMutableData.dataWithLength(hashSize);
+
+	CCHmac(algorithm, nsKeyData.bytes, nsKeyData.length, nsInputData.bytes, nsInputData.length, hash.mutableBytes);
+
+	const data: NSData = NSData.dataWithBytesLength(hash.mutableBytes, hashSize);
+
+	return _Format(data);
+}
+
 
 function _Format(data: NSData): string {
 	const buffer: ArrayBuffer = interop.bufferFromData(data);
