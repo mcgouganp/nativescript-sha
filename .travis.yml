@@ -73,10 +73,7 @@ addons:
       python
 
 before_install:
-    - sudo python -V
-    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then sudo python -m pip -V; fi
-    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then sudo python -m pip2 -V; fi
-    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then sudo python -m pip3 -V; fi
+    - if [ "$TRAVIS_OS_NAME" = "osx" ]; then sudo easy_install pip; fi
     - sudo python -m pip install --upgrade pip
     - sudo python -m pip install six
 
