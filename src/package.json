@@ -1,7 +1,7 @@
 {
 	"name": "nativescript-sha",
-	"version": "1.0.2",
 	"description": "Nativescript SHA plugin.",
+	"version": "1.0.3",
 	"main": "sha",
 	"typings": "index.d.ts",
 	"nativescript": {
