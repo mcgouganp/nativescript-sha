@@ -67,8 +67,12 @@ android:
     - extra-android-m2repository
     - sys-img-armeabi-v7a-android-21
 
+addons:
+  homebrew:
+    packages:
+      python
+
 before_install:
-    - sudo brew install python
     - sudo pip install --upgrade pip
     - sudo pip install six
 
