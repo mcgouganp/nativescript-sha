@@ -73,8 +73,8 @@ addons:
       python
 
 before_install:
-    - sudo pip install --upgrade pip
-    - sudo pip install six
+    - sudo python -m pip install --upgrade pip
+    - sudo python -m pip install six
 
 install:
     - echo no | npm install -g nativescript
