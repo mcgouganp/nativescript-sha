@@ -3,6 +3,7 @@
 [![npm](https://img.shields.io/npm/v/nativescript-sha.svg)](https://www.npmjs.com/package/nativescript-sha)
 [![npm](https://img.shields.io/npm/dm/nativescript-sha.svg)](https://www.npmjs.com/package/nativescript-sha)
 [![Build Status](https://travis-ci.org/mcgouganp/nativescript-sha.svg?branch=master)](https://travis-ci.org/mcgouganp/nativescript-sha)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6D28NSTFXMQKQ)
 
 This plugin gives access to native SHA generation code on iOS and Android.
 
@@ -31,6 +32,10 @@ console.log(`Hash is ${Sha256("this is our test data")}`);
 
 console.log(`Hmac is ${HmacSha256("secretkey", "this is our test data")}`);
 ```
+
+## Donation
+If this project help you reduce time to develop, you can give me a cup of coffee or some electricity :)
+[![Donate](https://www.paypalobjects.com/en_AU/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6D28NSTFXMQKQ)
 
 ## License
 
