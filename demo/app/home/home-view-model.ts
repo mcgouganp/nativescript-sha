@@ -1,4 +1,4 @@
-import { Observable, PropertyChangeData } from "tns-core-modules/data/observable";
+import { Observable, PropertyChangeData } from "@nativescript/core/data/observable";
 import { Sha1, Sha224, Sha256, Sha384, Sha512, HmacSha1, HmacSha224, HmacSha256, HmacSha384, HmacSha512 } from 'nativescript-sha';
 
 export class HomeViewModel extends Observable {

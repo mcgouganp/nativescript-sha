@@ -12,19 +12,19 @@
   "license": "SEE LICENSE IN <your-license-filename>",
   "repository": "<fill-your-repository-here>",
   "dependencies": {
+    "@nativescript/core": "^6.5.1",
+    "@nativescript/theme": "^2.3.3",
     "nativescript-sha": "file:../src",
-    "nativescript-theme-core": "~1.0.4",
-    "nativescript-unit-test-runner": "0.7.0",
-    "tns-core-modules": "~6.2.0"
+    "nativescript-unit-test-runner": "0.7.0"
   },
   "devDependencies": {
-    "@types/jasmine": "^3.3.13",
-    "karma": "4.1.0",
-    "karma-jasmine": "2.0.1",
+    "@types/jasmine": "^3.5.10",
+    "karma": "^5.0.1",
+    "karma-jasmine": "^3.1.1",
     "karma-nativescript-launcher": "0.4.0",
     "karma-webpack": "^4.0.2",
-    "nativescript-dev-webpack": "~1.3.0",
-    "typescript": "3.4.5"
+    "nativescript-dev-webpack": "^1.5.1",
+    "typescript": "^3.8.3"
   },
   "gitHead": "803cec054c44c99eaa59cdc267993e6346f6cb3a",
   "readme": "NativeScript Application"

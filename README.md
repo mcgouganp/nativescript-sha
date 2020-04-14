@@ -19,7 +19,7 @@ None.
 
 To install, simply run:
 
-```javascript
+```bash
 tns plugin add nativescript-sha
 ```
 
