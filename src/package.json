@@ -56,7 +56,7 @@
 		"nativescript-dev-webpack": "^1.5.1",
 		"prompt": "^1.0.0",
 		"rimraf": "^3.0.2",
-		"semver": "^7.2.2",
+		"semver": "^7.3.2",
 		"tns-platform-declarations": "^6.5.1",
 		"tslint": "^6.1.1",
 		"typescript": "^3.8.3"
